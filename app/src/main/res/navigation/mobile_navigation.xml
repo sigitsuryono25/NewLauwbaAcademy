@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/featured">
+
+    <fragment
+        android:id="@+id/featured"
+        android:name="com.surelabs.request.newlauwbaacademy.ui.featured.FeaturedFragment"
+        android:label=""
+        tools:layout="@layout/fragment_featured" />
+
+    <fragment
+        android:id="@+id/search"
+        android:name="com.surelabs.request.newlauwbaacademy.ui.search.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/myCourses"
+        android:name="com.surelabs.request.newlauwbaacademy.ui.mycourses.MyCoursesFragment"
+        android:label="@string/my_courses"
+        tools:layout="@layout/fragment_mycourses" />
+
+    <fragment
+        android:id="@+id/wishList"
+        android:name="com.surelabs.request.newlauwbaacademy.ui.wishlist.WishListFragment"
+        android:label="@string/wishlist"
+        tools:layout="@layout/fragment_wish_list" />
+
+    <fragment
+        android:id="@+id/account"
+        android:name="com.surelabs.request.newlauwbaacademy.ui.account.AccountFragment"
+        android:label="@string/account"
+        tools:layout="@layout/fragment_account" />
+</navigation>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">New Lauwba Academy</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="featured">Featured</string>
+    <string name="search">Search</string>
+    <string name="my_courses">My Courses</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="account">Account</string>
+    <string name="categories">Categories</string>
+    <string name="see_all">SEE ALL</string>
+    <string name="top_courses_in_android">Top courses in Android</string>
+    <string name="top_courses_in_digital_marketing">Top courses in Digital Marketing</string>
+    <string name="top_courses_in_flutter">Top courses in Flutter</string>
+    <string name="top_courses_in_ios">Top courses in iOS</string>
+    <string name="top_courses_in_seo">Top courses in SEO</string>
+    <string name="top_courses_in_web">Top courses in Web</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="example_title">example title</string>
+    <string name="example_created_by">example created by</string>
+    <string name="dummy_price">Rp. 104.503</string>
+    <string name="search_hint">Yuk, mulai cari kursus yang kamu mau</string>
+</resources>

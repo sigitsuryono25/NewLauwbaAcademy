@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    tools:context=".adapter.AdapterCourses">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/coverCourses"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/coursesName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:textColor="@android:color/black"
+                android:ellipsize="end"
+                android:fontFamily="@font/biryani"
+                android:maxLines="1"
+                android:text="@string/example_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/createdBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textColor="@android:color/black"
+                android:maxLines="1"
+                android:fontFamily="@font/biryani"
+                android:text="@string/example_created_by"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/rate"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:isIndicator="true"
+                android:numStars="5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/harga"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:maxLines="1"
+                    android:fontFamily="@font/biryani"
+                    android:text="@string/dummy_price"
+                    android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle" />
+
+                <TextView
+                    android:id="@+id/hargaCoret"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/black"
+                    android:maxLines="1"
+                    android:fontFamily="@font/biryani"
+                    android:text="@string/dummy_price"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
