@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="2dp"
+    android:layout_marginVertical="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/coursesBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/biryani"
+            android:text="@string/this_courses_created_by"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageTrainer"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/coursesBy"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_account" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/imageTrainer"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/imageTrainer"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/namaTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/biryani"
+                android:text="@string/sigit_suryono"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/jumlahCourses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_courses"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/biryani"
+                android:gravity="center_vertical"
+                android:text="@string/_10_courses" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

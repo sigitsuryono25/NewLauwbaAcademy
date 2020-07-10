@@ -2,6 +2,7 @@
 
 package com.surelabs.request.newlauwbaacademy.ui.search
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -15,6 +16,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DefaultItemAnimator
 import com.surelabs.request.newlauwbaacademy.R
 import com.surelabs.request.newlauwbaacademy.adapter.AdapterCourses
+import com.surelabs.request.newlauwbaacademy.detailcourses.DetailCoursesActivity
 import com.surelabs.request.newlauwbaacademy.model.coursesbykategori.ResponseCoursesByKategori
 import kotlinx.android.synthetic.main.fragment_search.*
 
@@ -61,7 +63,10 @@ class SearchFragment : Fragment() {
         if (result?.code == 200) {
             val data = result.courseData
             val adapter = AdapterCourses(data, {
-
+                Intent(activity, DetailCoursesActivity::class.java).apply {
+                    putExtra("data", it)
+                    startActivity(this)
+                }
             }, true)
             searchResultRv.itemAnimator = DefaultItemAnimator()
             searchResultRv.adapter = adapter

@@ -76,4 +76,20 @@ class Repository {
                 })
         )
     }
+
+    fun getYourCourses(
+        email: String?, response: (ResponseCoursesByKategori) -> Unit,
+        throwable: (Throwable) -> Unit
+    ) {
+        disposable.add(
+            api.getYourCourses(email)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    response(it)
+                }, {
+                    throwable(it)
+                })
+        )
+    }
 }

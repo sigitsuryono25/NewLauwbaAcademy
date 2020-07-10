@@ -1,13 +1,23 @@
 package com.surelabs.request.newlauwbaacademy.ui.mycourses
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.surelabs.request.newlauwbaacademy.model.coursesbykategori.ResponseCoursesByKategori
+import com.surelabs.request.newlauwbaacademy.repo.Repository
 
 class MyCoursesViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is mycourses Fragment"
+
+    val myCoursesResponse = MutableLiveData<ResponseCoursesByKategori>()
+    val myCoursesThrowable = MutableLiveData<Throwable>()
+
+    private var repository: Repository = Repository()
+
+    fun getYourCourses(email: String?) {
+        repository.getYourCourses(email, {
+            myCoursesResponse.value = it
+        }, {
+            myCoursesThrowable.value = it
+        })
     }
-    val text: LiveData<String> = _text
 }

@@ -16,6 +16,7 @@
         app:srcCompat="@drawable/logo_apk" />
 
     <ProgressBar
+        style="@android:style/Widget.Material.Light.ProgressBar.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

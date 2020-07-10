@@ -22,4 +22,25 @@
     <string name="example_created_by">example created by</string>
     <string name="dummy_price">Rp. 104.503</string>
     <string name="search_hint">Yuk, mulai cari kursus yang kamu mau</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="your_courses">Your Courses</string>
+    <string name="browse_categories">Browse categories</string>
+    <string name="what_will_you_learn_first">What will you learn first?</string>
+    <string name="your_courses_will_go_here">Your courses will go here</string>
+    <string name="microsoft_excel_excel_from_beginner_to_advance">Microsoft Excel - Excel from Beginner to Advance</string>
+    <string name="preview_this_courses">Preview This Courses</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="this_course_includes">This Course Includes</string>
+    <string name="e_certificate">E-Certificate</string>
+    <string name="pdf_modules">PDF Modules</string>
+    <string name="lifetime_video_access">Lifetime Video Access</string>
+    <string name="what_will_i_learn">What Will I Learn?</string>
+    <string name="description">Description</string>
+    <string name="requirements">Requirements</string>
+    <string name="sigit_suryono">Sigit Suryono</string>
+    <string name="_10_courses">10 courses</string>
+    <string name="this_courses_created_by">This Courses Created By</string>
 </resources>

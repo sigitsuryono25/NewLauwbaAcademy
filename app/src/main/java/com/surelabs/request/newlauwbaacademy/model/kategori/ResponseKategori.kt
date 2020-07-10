@@ -27,5 +27,8 @@ data class DataItemKategori(
     val kategoriSeo: String? = null,
 
     @field:SerializedName("nama_kategori")
-    val namaKategori: String? = null
+    val namaKategori: String? = null,
+
+    @field:SerializedName("mobile_icon")
+    val mobileIcon: String? = null
 ) : Parcelable

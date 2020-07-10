@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import com.surelabs.request.newlauwbaacademy.R
 import com.surelabs.request.newlauwbaacademy.adapter.AdapterCourses
 import com.surelabs.request.newlauwbaacademy.coursebycategory.CoursesByCategoryActivity
+import com.surelabs.request.newlauwbaacademy.detailcourses.DetailCoursesActivity
 import com.surelabs.request.newlauwbaacademy.model.coursesbykategori.ResponseCoursesByKategori
 import com.surelabs.request.newlauwbaacademy.model.kategori.ResponseKategori
 import kotlinx.android.synthetic.main.fragment_featured.*
@@ -143,7 +144,10 @@ class FeaturedFragment : Fragment() {
             "android" -> {
                 val data = responseCoursesByKategori.courseData
                 val adapter = AdapterCourses(data, {
-
+                    Intent(activity, DetailCoursesActivity::class.java).apply {
+                        putExtra("data", it)
+                        startActivity(this)
+                    }
                 })
                 androidRv.itemAnimator = DefaultItemAnimator()
                 androidRv.adapter = adapter
@@ -151,7 +155,10 @@ class FeaturedFragment : Fragment() {
             "flutter" -> {
                 val data = responseCoursesByKategori.courseData
                 val adapter = AdapterCourses(data, {
-
+                    Intent(activity, DetailCoursesActivity::class.java).apply {
+                        putExtra("data", it)
+                        startActivity(this)
+                    }
                 })
                 flutterRv.itemAnimator = DefaultItemAnimator()
                 flutterRv.adapter = adapter
@@ -160,7 +167,10 @@ class FeaturedFragment : Fragment() {
             "seo" -> {
                 val data = responseCoursesByKategori.courseData
                 val adapter = AdapterCourses(data, {
-
+                    Intent(activity, DetailCoursesActivity::class.java).apply {
+                        putExtra("data", it)
+                        startActivity(this)
+                    }
                 })
                 seoRv.itemAnimator = DefaultItemAnimator()
                 seoRv.adapter = adapter
@@ -169,7 +179,10 @@ class FeaturedFragment : Fragment() {
             "digital-marketing" -> {
                 val data = responseCoursesByKategori.courseData
                 val adapter = AdapterCourses(data, {
-
+                    Intent(activity, DetailCoursesActivity::class.java).apply {
+                        putExtra("data", it)
+                        startActivity(this)
+                    }
                 })
                 digitalMarketingRv.itemAnimator = DefaultItemAnimator()
                 digitalMarketingRv.adapter = adapter
@@ -178,7 +191,10 @@ class FeaturedFragment : Fragment() {
             "ios" -> {
                 val data = responseCoursesByKategori.courseData
                 val adapter = AdapterCourses(data, {
-
+                    Intent(activity, DetailCoursesActivity::class.java).apply {
+                        putExtra("data", it)
+                        startActivity(this)
+                    }
                 })
                 iOSRv.itemAnimator = DefaultItemAnimator()
                 iOSRv.adapter = adapter
@@ -187,7 +203,10 @@ class FeaturedFragment : Fragment() {
             "web" -> {
                 val data = responseCoursesByKategori.courseData
                 val adapter = AdapterCourses(data, {
-
+                    Intent(activity, DetailCoursesActivity::class.java).apply {
+                        putExtra("data", it)
+                        startActivity(this)
+                    }
                 })
                 webRv.itemAnimator = DefaultItemAnimator()
                 webRv.adapter = adapter

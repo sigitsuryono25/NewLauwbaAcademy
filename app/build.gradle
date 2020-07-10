@@ -66,4 +66,10 @@ dependencies {
     // Google FlexBox
     implementation 'com.google.android:flexbox:2.0.1'
 
+    //androidSVG
+    implementation 'com.github.ar-android:AndroidSvgLoader:1.0.2'
+
+    //expandable card
+    implementation 'com.alespero:expandable-cardview:0.8'
+
 }

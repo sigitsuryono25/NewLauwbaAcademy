@@ -1,5 +1,6 @@
 package com.surelabs.request.newlauwbaacademy.coursebycategory
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
@@ -10,8 +11,10 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DefaultItemAnimator
 import com.surelabs.request.newlauwbaacademy.R
 import com.surelabs.request.newlauwbaacademy.adapter.AdapterCourses
+import com.surelabs.request.newlauwbaacademy.detailcourses.DetailCoursesActivity
 import com.surelabs.request.newlauwbaacademy.model.coursesbykategori.ResponseCoursesByKategori
 import kotlinx.android.synthetic.main.activity_courses_by_category.*
+import kotlinx.android.synthetic.main.toolbars.*
 
 class CoursesByCategoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +23,7 @@ class CoursesByCategoryActivity : AppCompatActivity() {
 
         val kategori = intent.getStringExtra("data")
 
+        setSupportActionBar(toolbars)
         supportActionBar?.title = "Kategori: $kategori"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
@@ -50,7 +54,10 @@ class CoursesByCategoryActivity : AppCompatActivity() {
         if (result?.code == 200) {
             val data = result.courseData
             val adapter = AdapterCourses(data, {
-
+                Intent(this@CoursesByCategoryActivity, DetailCoursesActivity::class.java).apply {
+                    putExtra("data", it)
+                    startActivity(this)
+                }
             }, true)
             coursesRv.itemAnimator = DefaultItemAnimator()
             coursesRv.adapter = adapter

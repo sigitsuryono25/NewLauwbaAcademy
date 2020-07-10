@@ -4,9 +4,7 @@ import com.surelabs.request.newlauwbaacademy.model.coursesbykategori.ResponseCou
 import com.surelabs.request.newlauwbaacademy.model.detailcourses.ResponseDetailCourses
 import com.surelabs.request.newlauwbaacademy.model.kategori.ResponseKategori
 import io.reactivex.Observable
-import retrofit2.http.GET
-import retrofit2.http.Path
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface ApiService {
 
@@ -22,4 +20,7 @@ interface ApiService {
     @GET("doSearch")
     fun doSearch(@Query("q") search: String?): Observable<ResponseCoursesByKategori>
 
+    @FormUrlEncoded
+    @POST("getYourCourses")
+    fun getYourCourses(@Field("email") email: String?): Observable<ResponseCoursesByKategori>
 }
